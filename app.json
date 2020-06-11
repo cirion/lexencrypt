@@ -1,0 +1,6 @@
+{
+  "name": "Lexencrypt",
+  "description": "Simple ktor content app with routes.",
+  "image": "heroku/java",
+  "addons": [  ]
+}
