@@ -73,7 +73,7 @@ fun Application.module(testing: Boolean = false) {
                 val post = call.receiveParameters()
                 val answer = post["answer"]
                 if (answer == "97") {
-                    call.respondRedirect("/", permanent = false)
+                    call.respondRedirect("/sobad", permanent = false)
                 } else if (answer?.toIntOrNull() == null) {
                     call.respond(FreeMarkerContent("2_movie.ftl", mapOf("error" to "It's definitely a number. And that isn't a number.")))
                 } else {
@@ -85,6 +85,21 @@ fun Application.module(testing: Boolean = false) {
                         call.respond(FreeMarkerContent("2_movie.ftl", mapOf("error" to "Definitely more than that!")))
                     }
                 }
+            }
+        }
+
+        route("/sobad") {
+            get {
+                call.respond(FreeMarkerContent("3_trouble.ftl", null))
+            }
+            post {
+                call.respondRedirect("/flewthecoop", permanent = false)
+            }
+        }
+
+        route("/flewthecoop") {
+            get {
+                call.respond(FreeMarkerContent("4_fbi.ftl", null))
             }
         }
 
