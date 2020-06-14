@@ -50,6 +50,12 @@ fun Application.module(testing: Boolean = false) {
 
     routing {
 
+        route("/privacy") {
+            get {
+                call.respond(FreeMarkerContent("privacy.ftl", null))
+            }
+        }
+
         // TODO: Rewrite to root.
         route("/landing") {
             get {
