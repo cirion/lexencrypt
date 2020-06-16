@@ -56,7 +56,7 @@ fun Application.module(testing: Boolean = false) {
             }
         }
 
-        // TODO: Rewrite to root.
+        // TODO: Rewrite to /solved.
         route("/landing") {
             get {
                 call.respond(FreeMarkerContent("1_landing.ftl", null))
@@ -110,7 +110,11 @@ fun Application.module(testing: Boolean = false) {
         }
 
         get("/") {
-            call.respondText("HELLO WORLD!", contentType = ContentType.Text.Plain)
+            call.respond(FreeMarkerContent("index.ftl", null))
+        }
+
+        get("/solved") {
+            call.respond(FreeMarkerContent("solved.ftl", null))
         }
 
         get("/html-freemarker") {

@@ -5,7 +5,8 @@
 </head>
 <body>
 <div class="content">
-<p>Welcome to Lexencrypt! Please check back soon for links to download.</p>
+<p>Thank you for playing Lexencrypt! Stay tuned for future updates, including high
+scores, new challenge modes, and more!</p>
 </div>
 </body>
 </html>
