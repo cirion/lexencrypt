@@ -22,7 +22,7 @@ Our COLLEAGUES at the NATIONAL SECURITY AGENCY have intercepted a TRANSMISSION f
 The TRANSMISSION FOLLOWS
 </p>
 <audio controls>
-  <source src="/static/powers.wav" type="audio/wave">
+  <source src="/static/clue.wav" type="audio/wave">
 Your browser does not support the audio element.
 </audio>
 </div>
