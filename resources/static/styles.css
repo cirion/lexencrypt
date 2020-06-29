@@ -31,7 +31,7 @@ input[type=option] {
   border-radius: 4px;
   box-sizing: border-box;
   resize: vertical;
-  font-size: 1.0em;
+  font-size: 2.0em;
 }
 
 input[type=submit] {
@@ -73,8 +73,10 @@ input[type=submit] {
 }
 
 .game {
+  display: block;
+  margin: auto;
   width: 640px;
-  height: 480px;
+  height: 490px;
 }
 
 @media (min-width: 360px) {
