@@ -5,7 +5,7 @@
 </head>
 <body>
 <div class="content">
-<img src="/static/images/fbi.png" />
+<img src="/static/images/fbi_200.png" />
 <p>
 ATTENTION
 </p>

@@ -63,7 +63,23 @@ fun Application.module(testing: Boolean = false) {
             }
             post {
                 val post = call.receiveParameters()
-                if (post["answer"]?.toLowerCase() == "8") {
+                var correct = false
+                val colors = post.getAll("color")
+                if (colors != null) {
+                    if (colors.containsAll(listOf("orange",
+                                    "blue",
+                                    "green",
+                                    "purple"))) {
+                        if (!colors.contains("red")
+                                && !colors.contains("brown")
+                                && !colors.contains("yellow")
+                                && !colors.contains("black")
+                        ) {
+                            correct = true
+                        }
+                    }
+                }
+                if (correct) {
                     call.respondRedirect("/powerglove", permanent = false)
                 } else {
                     call.respond(FreeMarkerContent("1_landing.ftl", mapOf("error" to "That isn't working. Can you try something else?")))
