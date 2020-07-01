@@ -5,9 +5,11 @@ import io.ktor.application.Application
 import io.ktor.application.call
 import io.ktor.application.install
 import io.ktor.features.DefaultHeaders
+import io.ktor.features.StatusPages
 import io.ktor.freemarker.FreeMarker
 import io.ktor.freemarker.FreeMarkerContent
 import io.ktor.http.ContentType
+import io.ktor.http.HttpStatusCode
 import io.ktor.http.content.files
 import io.ktor.http.content.resource
 import io.ktor.http.content.static
@@ -36,6 +38,11 @@ fun Application.module(testing: Boolean = false) {
     }
 
     install(Locations) {
+    }
+    install(StatusPages) {
+        status(HttpStatusCode.NotFound) {
+            call.respond(FreeMarkerContent("404.ftl", null))
+        }
     }
 
     install(DefaultHeaders) {
@@ -80,13 +87,15 @@ fun Application.module(testing: Boolean = false) {
                     }
                 }
                 if (correct) {
-                    call.respondRedirect("/powerglove", permanent = false)
+                    call.respondRedirect("/sobad", permanent = false)
                 } else {
-                    call.respond(FreeMarkerContent("1_landing.ftl", mapOf("error" to "That isn't working. Can you try something else?")))
+                    call.respond(FreeMarkerContent("1_landing.ftl", mapOf("error" to "Yikes! No, he will be intercepted on that route. Can you try something else?")))
                 }
             }
         }
 
+        // I'm cutting this from the hunt, it's obscure and not super fun
+        // for this demographic.
         route("/powerglove") {
             get {
                 call.respond(FreeMarkerContent("2_movie.ftl", null))

@@ -6,11 +6,17 @@
 <body>
 <div class="content">
     <p>
-    Great work! That should get the feds off of Chris's back.
+    Great work! You remind me of another talented hacker.
+    </p>
+    <img src="/static/images/donatello_typing.gif" />
+    <p>
+    Now that the evidence has been destroyed, the feds won't have a case
+    against him, and he can safely return to America.
     </p>
     <p>
-    Chris needs an important piece of information. The package he sent you includes
-    some lines and circles drawn in various colors. What colors did he use?
+    Chris needs some important information as he re-enters the country.
+    The package he sent you includes flight paths and radar zones, rendered
+    with colored lines and circles. What colors did he use?
     </p>
     <#if error??>
         <p style="color:red;">${error}</p>
