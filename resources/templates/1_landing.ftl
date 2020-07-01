@@ -1,6 +1,7 @@
 <html>
 <head>
     <#include "/common/head.ftl">
+    <#include "/common/turtle2.ftl">
     <title>Lexencrypt</title>
 </head>
 <body>

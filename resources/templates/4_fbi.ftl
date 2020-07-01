@@ -1,6 +1,7 @@
 <html>
 <head>
     <#include "/common/head.ftl">
+    <#include "/common/rocksteady.ftl">
     <title>🕴️</title>
 </head>
 <body>
