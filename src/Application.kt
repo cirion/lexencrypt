@@ -63,7 +63,7 @@ fun Application.module(testing: Boolean = false) {
             }
         }
 
-        route("/solved") {
+        route("/landing") {
             get {
                 call.respond(FreeMarkerContent("1_landing.ftl", null))
             }
@@ -137,7 +137,7 @@ fun Application.module(testing: Boolean = false) {
             call.respond(FreeMarkerContent("index.ftl", null))
         }
 
-        get("/solved_old") {
+        get("/solved") {
             call.respond(FreeMarkerContent("solved.ftl", null))
         }
 
