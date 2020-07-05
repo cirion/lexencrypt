@@ -63,8 +63,7 @@ fun Application.module(testing: Boolean = false) {
             }
         }
 
-        // TODO: Rewrite to /solved.
-        route("/landing") {
+        route("/solved") {
             get {
                 call.respond(FreeMarkerContent("1_landing.ftl", null))
             }
@@ -138,7 +137,7 @@ fun Application.module(testing: Boolean = false) {
             call.respond(FreeMarkerContent("index.ftl", null))
         }
 
-        get("/solved") {
+        get("/solved_old") {
             call.respond(FreeMarkerContent("solved.ftl", null))
         }
 

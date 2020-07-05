@@ -22,8 +22,7 @@
     <#if error??>
         <p style="color:red;">${error}</p>
     </#if>
-    <#-- TODO: Rewrite action to root. -->
-    <form action="/landing" method="post" enctype="application/x-www-form-urlencoded">
+    <form action="/solved" method="post" enctype="application/x-www-form-urlencoded">
         <input type="checkbox" id="color1" name="color" value="red">
         <label for="color1"> Red</label><br>
         <input type="checkbox" id="color2" name="color" value="orange">
